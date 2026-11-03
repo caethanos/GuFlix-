@@ -1,15 +1,34 @@
-# Guflix
+# Study Garden — plataforma de estudios
 
-Plataforma estática de aprendizagem de idiomas com trilhas gamificadas:
+Plataforma estática de una sola página con trilhas de inglés A1 y español. Las unidades de español 05 (Salud y Bienestar) y 06 (Las Finanzas) combinan el catálogo visual de trilhas del HTML de referencia con el formato pedagógico y los temas del archivo de instrucciones.
 
-- **Unidade 05 — Saúde e bem-estar**: saúde, estresse, relaxamento, diminutivos e alimentação.
-- **Unidade 06 — Finanças**: trueque, evolução do dinheiro, divisas, poupança e juros.
-- **Inglês — Capítulo 6**: Past Continuous, Simple Past, when/while e adjetivos de emoção.
+## Contenido y funciones
 
-Cada episódio começa com uma explicação em português e um exemplo no idioma estudado, com tradução. Em seguida, a atividade apresenta enunciado e alternativas no idioma estudado, acompanhados da tradução em português e de uma dica. Os erros entram em uma fila de revisão espaçada com intervalos crescentes de 1, 3, 7, 14 e 30 dias; a fila também permite praticar antes da data sugerida. O progresso e a memória de revisão ficam salvos no navegador do estudante (`localStorage`).
+- Flashcards, quiz de opción múltiple, desafíos situacionales y escritura libre.
+- Inglés A1 y español: salud según la OMS, estrés y técnicas de relajación, diminutivos afectivos, historia del dinero, trueque, divisas digitales, ahorro e intereses.
+- Las preguntas de español siguen una estructura con `unit_id`, opciones marcadas, explicación, error común y sugerencia visual.
+- Revisión de preguntas falladas, selección de módulos, XP, racha y registro de etapas en `localStorage`.
+- La corrección generativa todavía no está conectada; la práctica escrita usa las respuestas y reglas incluidas en el archivo.
 
-## Publicar no GitHub Pages
+## Publicar en GitHub Pages
 
-Envie `index.html`, `styles.css`, `pedagogy.js`, `app.js` e `README.md` para a raiz do repositório. Em **Settings → Pages**, selecione **Deploy from a branch**, escolha a branch principal e a pasta `/ (root)`.
+1. Crea un repositorio en GitHub y sube `index.html` a la raíz.
+2. Abre **Settings → Pages**.
+3. Elige **Deploy from a branch**, rama `main` y carpeta `/ (root)`; pulsa **Save**.
+4. Abre la dirección que GitHub muestre en Pages cuando termine la publicación.
 
-Não há servidor ou etapa de build. As fontes usam Google Fonts, com fontes locais de reserva.
+## Publicar en Netlify
+
+1. Conecta Netlify con tu cuenta de GitHub.
+2. Selecciona **Add new site → Import an existing project** y elige el repositorio.
+3. Deja vacío **Build command** y usa `.` como **Publish directory**.
+4. Pulsa **Deploy site**. También puedes publicar manualmente arrastrando la carpeta que contiene `index.html`.
+
+El avance se guarda en el navegador y no se sincroniza entre dispositivos. La integración de Supabase/IA requerirá configurar el proyecto y sus credenciales por separado.
+
+## Modo intensivo
+
+El quiz abre primero una pantalla de preparación con la explicación y un ejemplo del módulo antes de cada pregunta. En modo intensivo, una respuesta incorrecta devuelve al alumno a la explicación y no permite avanzar hasta acertar. La plataforma registra las preguntas dominadas y muestra el avance por módulo. El alumno puede cambiar al modo directo cuando quiera.
+
+
+Banco actual: 30 preguntas en cada una de las cuatro unidades de inglés (120 en total), más 11 preguntas en las dos unidades de español. Las cuatro unidades de inglés suman 120 preguntas de quiz.
