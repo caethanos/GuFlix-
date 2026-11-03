@@ -11,7 +11,7 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#inicio" aria-label="Guflix início">GU<span>FLIX</span></a>
-    <nav class="course-nav" aria-label="Navegar pelas trilhas"><a href="#unidades">Salud</a><a href="#finanzas">Finanzas</a><a href="#english">English · Chapter 6</a></nav>
+    <nav class="course-nav" aria-label="Navegar pelas trilhas"><a href="#unidades">Saúde</a><a href="#finanzas">Finanças</a><a href="#english">Inglês · Capítulo 6</a></nav>
     <div class="profile"><span class="level">ESTUDANTE INTERMEDIÁRIO</span><span class="xp">✦ <b id="xp-count">0</b> XP</span></div>
   </header>
   <main id="inicio">
@@ -21,15 +21,15 @@
     </section>
     <section class="progress-panel" aria-label="Seu progresso"><div><span class="eyebrow">SUA JORNADA</span><h2 id="progress-label">Vamos começar?</h2><p id="progress-detail">Responda às questões para construir sua sequência de aprendizado.</p></div><div class="progress-track" aria-label="Progresso geral"><div id="progress-fill"></div></div><strong id="progress-percent">0%</strong></section>
     <section id="unidades" class="unit-section" aria-labelledby="u5-heading">
-      <div class="section-heading"><div><p class="eyebrow">UNIDADE 05 · MÓDULO ISOLADO</p><h2 id="u5-heading">Salud y Bienestar</h2><p>Cuide do vocabulário e descubra práticas para o bem-estar.</p></div><span class="unit-count" id="u5-count">7 episódios</span></div>
+      <div class="section-heading"><div><p class="eyebrow">UNIDADE 05 · MÓDULO ISOLADO</p><h2 id="u5-heading">Saúde e bem-estar</h2><p>Cuide do vocabulário e descubra práticas para o bem-estar.</p></div><span class="unit-count" id="u5-count">7 episódios</span></div>
       <div class="card-row" id="u5-cards"></div>
     </section>
     <section id="finanzas" class="unit-section" aria-labelledby="u6-heading">
-      <div class="section-heading"><div><p class="eyebrow">UNIDADE 06 · MÓDULO ISOLADO</p><h2 id="u6-heading">Las Finanzas</h2><p>Do trueque às finanças digitais: aprenda os conceitos essenciais.</p></div><span class="unit-count" id="u6-count">6 episódios</span></div>
+      <div class="section-heading"><div><p class="eyebrow">UNIDADE 06 · MÓDULO ISOLADO</p><h2 id="u6-heading">Finanças</h2><p>Do trueque às finanças digitais: aprenda os conceitos essenciais.</p></div><span class="unit-count" id="u6-count">6 episódios</span></div>
       <div class="card-row" id="u6-cards"></div>
     </section>
     <section id="english" class="unit-section" aria-labelledby="english-heading">
-      <div class="section-heading"><div><p class="eyebrow">ENGLISH · CHAPTER 6 · MÓDULO ISOLADO</p><h2 id="english-heading">Past Continuous &amp; Emotions</h2><p>Pratique Past Continuous, Simple Past, when/while e adjetivos de emoção.</p></div><span class="unit-count" id="english-count">4 episódios</span></div>
+      <div class="section-heading"><div><p class="eyebrow">INGLÊS · CAPÍTULO 6 · MÓDULO ISOLADO</p><h2 id="english-heading">Passado e emoções</h2><p>Pratique Past Continuous, Simple Past, when/while e adjetivos de emoção.</p></div><span class="unit-count" id="english-count">4 episódios</span></div>
       <div class="card-row" id="english-cards">
         <button class="episode-card" style="--c1:#45376b;--c2:#191728" onclick="openQuiz('eng-1')"><span class="number">CAPÍTULO 6 · 01</span><span class="status-pill">Não iniciado</span><span class="card-title">Past Continuous</span><span class="card-meta">▶ Iniciar episódio</span></button>
         <button class="episode-card" style="--c1:#45376b;--c2:#191728" onclick="openQuiz('eng-2')"><span class="number">CAPÍTULO 6 · 02</span><span class="status-pill">Não iniciado</span><span class="card-title">When y While</span><span class="card-meta">▶ Iniciar episódio</span></button>
@@ -40,7 +40,8 @@
     <section class="unit-section review-section" aria-labelledby="review-heading"><div class="section-heading"><div><p class="eyebrow">REVISÃO INTELIGENTE</p><h2 id="review-heading">Sua próxima tentativa</h2><p>Questões que você errou ficam guardadas aqui para praticar novamente.</p></div></div><div class="card-row" id="review-cards"><div class="empty-state">Nenhum erro por aqui. Continue praticando!</div></div></section>
     <footer>GU<span>FLIX</span><small>Aprender idiomas pode ser uma boa história.</small></footer>
   </main>
-  <dialog id="quiz-modal" aria-labelledby="quiz-title"><div class="modal-shell"><button class="close-btn" id="close-modal" aria-label="Fechar">×</button><div class="quiz-topline"><span id="quiz-unit">UNIDADE</span><span id="quiz-step"></span></div><h2 id="quiz-title"></h2><p id="quiz-question" class="question"></p><div id="quiz-options" class="options"></div><div id="quiz-feedback" class="feedback" aria-live="polite" hidden></div><div class="modal-actions"><button id="next-question" class="primary-button" hidden>Continuar <span>→</span></button></div></div></dialog>
-  <script src="app.js?v=3"></script>
+  <dialog id="quiz-modal" aria-labelledby="quiz-title"><div class="modal-shell"><button class="close-btn" id="close-modal" aria-label="Fechar">×</button><div class="quiz-topline"><span id="quiz-unit">UNIDADE</span><span id="quiz-step"></span></div><h2 id="quiz-title"></h2><section id="lesson-panel" class="lesson-panel"><p class="lesson-kicker">ANTES DE PRATICAR</p><div id="lesson-copy"></div><div class="example-box"><span>EXEMPLO</span><p id="lesson-example"></p><small id="lesson-translation"></small></div><button id="begin-exercise" class="primary-button">Começar atividade <span>→</span></button></section><section id="exercise-panel" hidden><p id="quiz-question" class="question"></p><p id="question-translation" class="translation"></p><div id="quiz-hint" class="hint"></div><div id="quiz-options" class="options"></div><div id="quiz-feedback" class="feedback" aria-live="polite" hidden></div><div class="modal-actions"><button id="next-question" class="primary-button" hidden>Continuar <span>→</span></button></div></section></div></dialog>
+  <script src="app.js?v=6"></script>
+  <script src="pedagogy.js?v=2"></script>
 </body>
 </html>
