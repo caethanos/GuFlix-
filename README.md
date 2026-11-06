@@ -1,30 +1,16 @@
-# Estudo+ — plataforma de estudos
+# Guflix
 
-Plataforma estática de página única com trilhas de Inglês A1 e Espanhol. A interface e as orientações estão em português; as perguntas mantêm o idioma que o aluno está estudando.
+Plataforma estática de aprendizagem de idiomas com trilhas gamificadas:
 
-## O que está incluído
+- **Unidade 05 — Saúde e bem-estar**: saúde, estresse, relaxamento, diminutivos e alimentação.
+- **Unidade 06 — Finanças**: trueque, evolução do dinheiro, divisas, poupança e juros.
+- **Inglês — Capítulo 6**: Past Continuous, Simple Past, when/while e adjetivos de emoção.
+- **Filosofia — Ética**: ética e moral, Platão, Aristóteles, filosofias helenísticas, Kant, utilitarismo, bioética e Habermas.
 
-- Catálogo em tema escuro inspirado em plataformas de streaming, com prateleiras horizontais por idioma, cartões navegáveis e menu compacto fixo. A interface, as explicações e as instruções estão em português; inglês e espanhol aparecem nos exercícios como idiomas de estudo.
-- Quatro unidades de Inglês A1, com 30 perguntas de quiz cada (120 perguntas).
-- Unidades 05 — Saúde e bem-estar e 06 — Finanças, com 11 perguntas de Espanhol.
-- Modo intensivo: explicação e exemplo antes da pergunta; ao errar, o aluno revisa o conteúdo e tenta novamente antes de avançar.
-- Flashcards, exercícios escritos, desafios, revisão de erros, XP, sequência diária e registro local de progresso.
-- O progresso fica no `localStorage` do navegador. O app não exige servidor nem processo de build.
-
-A correção escrita atual usa respostas e regras incluídas no app. IA generativa e Supabase ainda precisam de configuração separada.
+A trilha de Filosofia foi elaborada a partir do capítulo de Ética fornecido. Cada episódio começa com uma explicação em português e um exemplo no idioma estudado, com tradução. Em seguida, a atividade apresenta enunciado e alternativas no idioma estudado, acompanhados da tradução em português e de uma dica. Os erros entram em uma fila de revisão espaçada com intervalos crescentes de 1, 3, 7, 14 e 30 dias; a fila também permite praticar antes da data sugerida. O progresso e a memória de revisão ficam salvos no navegador do estudante (`localStorage`).
 
 ## Publicar no GitHub Pages
 
-1. Crie um repositório no GitHub e envie `index.html` para a raiz.
-2. Abra **Settings → Pages**.
-3. Escolha **Deploy from a branch**, selecione a branch `main` e a pasta `/ (root)`, depois clique em **Save**.
-4. Quando a publicação terminar, abra o endereço mostrado na seção Pages.
+Envie `index.html`, `styles.css`, `pedagogy.js`, `app.js` e `README.md` para a raiz do repositório. Em **Settings → Pages**, selecione **Deploy from a branch**, escolha a branch principal e a pasta `/ (root)`.
 
-## Publicar no Netlify
-
-1. Conecte o Netlify à sua conta do GitHub.
-2. Escolha **Add new site → Import an existing project** e selecione o repositório.
-3. Deixe **Build command** vazio e informe `.` como **Publish directory**.
-4. Clique em **Deploy site**. O Netlify publicará novamente após novos envios para a branch conectada.
-
-Também é possível publicar arrastando a pasta que contém `index.html` para o deploy manual do Netlify.
+Não há servidor ou etapa de build. As fontes usam Google Fonts, com fontes locais de reserva.
