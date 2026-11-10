@@ -42,6 +42,6 @@ for (const q of questions) {
 }
 
 const portugueseTitles={'u5-1':'Saúde integral','u5-2':'Como lidar com o estresse','u5-3':'Relaxamento muscular','u5-4':'Respiração consciente','u5-5':'Visualização positiva','u5-6':'Diminutivos afetivos','u5-7':'Alimentação e bem-estar','u6-1':'Antes do dinheiro','u6-2':'O dinheiro facilita as trocas','u6-3':'Do dinheiro físico ao digital','u6-4':'Câmbio entre moedas','u6-5':'Poupar para uma meta','u6-6':'Juros da poupança','u6-7':'Juros compostos','eng-1':'Estrutura do Past Continuous','eng-2':'When e While','eng-3':'Simple Past','eng-4':'Adjetivos de emoções','phi-1':'Ética e moral','phi-2':'Ética platônica','phi-3':'Alegoria da caverna','phi-4':'Virtude em Aristóteles','phi-5':'O justo meio','phi-6':'Epicurismo','phi-7':'Estoicismo','phi-8':'Imperativo categórico','phi-9':'Princípio da maior felicidade','phi-10':'Dever e consequências','phi-11':'Princípios da bioética','phi-12':'Habermas e o diálogo'};
-for (const q of questions) q.title = portugueseTitles[q.id];
+for (const q of questions) q.title = portugueseTitles[q.id] || q.title;
 
 render();
